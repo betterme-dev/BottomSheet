@@ -3,6 +3,17 @@ apply from: 'https://raw.githubusercontent.com/soarcn/gradle/master/maven_push.g
 
 android {
     buildToolsVersion '28.0.2'
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+            }
+        }
+    }
 }
 
 dependencies {
