@@ -293,17 +293,17 @@ class SimpleSectionedGridAdapter extends BaseAdapter{
             }
             switch (mSections.get(position).type) {
                 case TYPE_HEADER:
-                    header = (HeaderLayout) convertView.findViewById(mHeaderLayoutResId);
+                    header = convertView.findViewById(mHeaderLayoutResId);
                     if (!TextUtils.isEmpty(mSections.get(position).title)) {
-                        view = (TextView) convertView.findViewById(mHeaderTextViewResId);
+                        view = convertView.findViewById(mHeaderTextViewResId);
                         view.setText(mSections.get(position).title);
                     }
                     header.setHeaderWidth(getHeaderSize());
                     break;
                 case TYPE_HEADER_FILLER:
-                    header = (HeaderLayout) convertView.findViewById(mHeaderLayoutResId);
+                    header = convertView.findViewById(mHeaderLayoutResId);
                     if (!TextUtils.isEmpty(mSections.get(position).title)) {
-                        view = (TextView) convertView.findViewById(mHeaderTextViewResId);
+                        view = convertView.findViewById(mHeaderTextViewResId);
                         view.setText(mSections.get(position).title);
                     }
                     header.setHeaderWidth(0);

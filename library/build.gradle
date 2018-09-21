@@ -1,6 +1,10 @@
 apply from: 'https://raw.githubusercontent.com/soarcn/gradle/master/android-library.gradle'
 apply from: 'https://raw.githubusercontent.com/soarcn/gradle/master/maven_push.gradle'
 
+android {
+    buildToolsVersion '28.0.2'
+}
+
 dependencies {
-    compile 'com.android.support:support-v4:24.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-rc02'
 }
